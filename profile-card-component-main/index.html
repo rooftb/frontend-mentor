@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 18px;
+    }
+
+    .info-1 {
+      font-weight: 700;
+    }
+
+    .info-2 {
+      font-weight: 400;
+      color: hsl(0, 0%, 59%)
+    }
+
+    .stat {
+      font-weight: 700;
+    }
+
+    .stat-title {
+      font-size: 75%;
+      letter-spacing: .1em;
+      color: hsl(0, 0%, 59%);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .card-info-3 {
+      padding: 1.4rem;
+    }
+
+    .card-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    
+    .card-top {
+     background-image: url(./images/bg-pattern-card.svg);
+    height: 150px;
+    width: 25rem;
+    margin-bottom: -50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    }
+
+    .wrapper {
+  background-color: hsl(185, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .card-b {
+      background-color: white;
+      border-radius: 10px;
+      justify-content: center;
+      width: 800px;
+    }
+
+    .avatar {
+      border: 4px solid white;
+    }
+
+    .card-info-3 {
+      width: 100%;
+    }
+
+    .divider {
+      border-top: 1px solid hsl(0, 0%, 59%);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper flex-column">
+  <div class="text-center card-wrapper" style="width: 24rem;">
+    <div class="card-b">
+      <div class="card-top"></div>
+      <div class="card-title">
+        <img class="rounded-circle avatar" src="./images/image-victor.jpg" alt="">
+        </div>
+          <div class="card-text mt-4 info-1 row d-flex justify-content-center">
+            <h4 class="info-1 mx-1 lg-6">Victor Crest</h4>
+            <h4 class="info-2 mx-1 lg-6">26</h4>
+          </div>
+        <div class="card-text info-2 mb-3"><span>London</span></div>
+        <div class="divider my-1"></div>
+        <div class="card-info-3 d-flex justify-content-around mt-1">
+          <div class="lg-4 p-1 card-text d-block">
+            <span class="stat">80K</span>
+            <br/>
+            <span class="stat-title">Followers</span>
+          </div>
+          <div class="lg-4 p-1 card-text d-block">
+            <span class="stat">803K</span>
+            <br />
+            <span class="stat-title">Likes</span>
+          </div>
+          <div class="lg-4 p-1 card-text d-block">
+            <span class="stat">1.4K</span>
+            <br />
+            <span class="stat-title">Photos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution fixed-bottom" >
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Tanner B. Roof</a>.
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
