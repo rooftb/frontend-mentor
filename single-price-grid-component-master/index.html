@@ -1,50 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Single Price Grid Component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cyan: hsl(179, 62%, 43%);
+      --brightYellow: hsl(71, 73%, 54%);
+      --lightGray: hsl(204, 43%, 93%);
+      --grayishBlue: hsl(218, 22%, 67%);
+    }
+
+    body {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: var(--lightGray);
+      border-radius: 16px;
+    }
+
+    .signUp {
+      box-shadow: inset 0px 1px 0px 0px #d9fbbe;
+      background: linear-gradient(to bottom, var(--brightYellow) 5%, #a5cc52 100%);
+      background-color: var(--brightYellow);
+      border-radius: 6px;
+      border: 1px solid #83c41a;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      padding: 12px 24px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #86ae47;
+      align-items: flex-end;
+      line-height: 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .signUp:hover {
+      background: linear-gradient(to bottom, #a5cc52 5%, var(--brightYellow) 100%);
+      background-color: #a5cc52;
+    }
+
+    .signUp:active {
+      position: relative;
+      top: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-content: stretch;
+      max-height: 500px;
+      min-width: 650px;
+      border-bottom-left-radius: 10rem;
+    }
+
+    .row {
+
+      display: flex;
+      flex-direction: row;
+      align-content: stretch;
+    }
+
+    .money-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .money-unit {
+      margin-left: .75rem;
+      color: lightgray;
+    }
+
+    .block {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 2em;
+      line-height: 1.5em;
+    }
+
+    #block1 {
+      background-color: #fff;
+    }
+
+    #block2 {
+      width: 50%;
+      color: var(--lightGray);
+      background-color: var(--cyan);
+
+    }
+
+    #block3 {
+      width: 50%;
+      color: var(--lightGray);
+      background-color: var(--cyan);
+      opacity: 70%;
+
+    }
+
+    .title {
+      color: var(--cyan);
+    }
+
+    .subtitle {
+      color: var(--brightYellow);
+    }
+
+    .info-1 {
+      color: var(--grayishBlue);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        height: 100%;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: inherit;
+        flex-direction: column;
+      }
+
+      .container {
+        flex-direction: column;
+        min-width: 100%;
+      }
+
+      .block {
+        width: 100% !important;
+
+      }
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+      }
+    }
   </style>
 </head>
+
 <body>
-  Join our community
+  <main>
+    <article class='container'>
+      <div class="block" id="block1">
+        <h1 class="title">Join our community</h1>
+        <br />
+        <h2 class="subtitle">30-day, hassle-free money back guarantee</h2>
+        <div class="info-1">
+          <p>Gain access to our full library of tutorials along with expert code reviews.</p>
+          <p>Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+      </div>
 
-  30-day, hassle-free money back guarantee
+      <div class="row">
+        <div class="block" id='block2'>
+          <h3>Monthly Subscription</h3>
+          <br />
+          <div class="money-row">
+            <h2 class="price">&dollar;29</h2><span class="money-unit"> per month</span>
+          </div>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+          <span>Full access for less than &dollar;1 a day</span>
+          <br />
+          <button class="signUp">Sign Up</button>
+        </div>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
+        <div class="block" id='block3'>
+          <h3>Why Us</h3>
+          <br />
+          <span>Tutorials by industry experts</span>
+          <span>Peer &amp; expert code review</span>
+          <span>Coding exercises</span>
+          <span>Access to our GitHub repos</span>
+          <span>Community forum</span>
+          <span>Flashcard decks</span>
+          <span>New videos every week</span>
+        </div>
+      </div>
+    </article>
+  </main>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>
+
 </html>
